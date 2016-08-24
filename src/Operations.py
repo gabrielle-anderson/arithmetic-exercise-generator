@@ -7,3 +7,5 @@ plus = lambda x, y: (x+y)
 minus = lambda x, y: (x-y)
 times = lambda x, y: (x*y)
 divides = lambda x, y: (x/y)
+
+operations = {"plus": plus, "minus": minus, "times": times, "divides": divides}

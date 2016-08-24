@@ -1,12 +1,9 @@
 from types import *
 
 class Operand:
-  digits = {}
-  # def __init__(self, *digitsTuple):
-  #   assert (digitsTuple.__len__() % 2 == 0)
-  #   for x in range(0, (digitsTuple.__len__()/2):
-  #       self.digits[digitsTuple[x]] = digitsTuple[x+1]
-  #   # assert validDigits()
+  def __init__(self):
+    self.digits = {}
+
   def addDigit(self, unit, multiple):
       assert type(unit) is FloatType, "unit is not a float"
       assert type(multiple) is IntType, "multiple is not an integer"
@@ -23,6 +20,12 @@ class Operand:
       result = 0.0
       for key in self.digits.keys():
           result += (key * self.digits[key])
+      if (result.is_integer()):
+          result = int(result)
+      return result
+
+  def __str__(self):
+      return str(self.value())
 
   # def validDigits(self):
   #
