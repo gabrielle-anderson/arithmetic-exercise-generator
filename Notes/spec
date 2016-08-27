@@ -1,0 +1,38 @@
+The addition, subtraction, multiplication and division levels describe what kind of calculations each level should have.
+
+Notes:
+      Adjusting means
+           carrying for addition
+           borrowing for subtraction
+           U = units, T = tens, H = hundreds, Th = thousands
+           borrowing across a zero means there is a zero in the first number in a subtraction problem in the tens or hundreds place
+     multiplication
+         TT grid means factors in the times table grid (1 -12)
+          NJ means number jacking, a way to multiply. You don't have to worry about this term,
+          GM means grid method, a way to multiply. You don't need to worry about this term.
+          EXCM means extended column method. You don't need to worry about this term.
+          adjusting means carrying
+     division
+          TT grid - the dividend (the number being divided) should be on the 1 - 12 times table grid.
+          adjusting means having a remainder you use with the next number to finish the calculation.
+                   e.g. 54 divided by 2. 2 goes into 5 two times, the left over 1 goes with the 4 to make 14. Then 14 divided by 2 is seven.
+          R means remainder
+          BSM  means bus stop method. You don't need to worry about this term.
+          NJ means number jacking. You don't need to worry about this term.
+          w/ means with
+          FR means fraction remainder
+          RD means recurring decimal
+          DP means decimal point
+
+On the worksheet, I would like:
+            three columns of calculations, 30 calculations per column.
+            All calculations should be written in a linear manner, e.g. 2 + 3 = . 5 - 2 = , 9 x 7 = , 12 ÷ 4 =
+            Unlike the sheets I would like all three columns to be different. This is because each child will get an individual sheet based on their abilities.
+            I would like the top of each column to list the child's name, and which level they are on for each operation (symbols instead of the operation word or letters if that is easier A=addition, S=subtraction, M=multiplication, D=division). It doesn't need the word number ops or their year.
+            e.g.   Joe Bloggs
+                      + 11, -8, x6, ÷4
+
+                      or
+
+                     Joe Bloggs
+                    A11, S8, M6, D4
