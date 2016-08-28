@@ -1,5 +1,5 @@
 from Operand import Operand
-from src.ProblemSpecifications.Bounds import Bounds
+from Bounds import Bounds
 
 
 class OperandSpecification(object):

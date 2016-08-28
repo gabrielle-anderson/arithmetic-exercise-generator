@@ -1,12 +1,12 @@
 import datetime
 import glob
-import os
 import re
 
-from src.Readers.SpecificationReader import *
-from src.Misc.constants import *
-from src.Readers.StudentReader import StudentReader
-from src.Writers.ProblemSheetWriter import ProblemSheetWriter
+from StudentReader import StudentReader
+
+from ProblemSheetWriter import ProblemSheetWriter
+from SpecificationReader import *
+from constants import *
 
 
 def processSpecifications(parameters):
@@ -56,4 +56,4 @@ for studentName in students.keys():
 
 end = datetime.datetime.now()
 
-print end - start
+# print end - start

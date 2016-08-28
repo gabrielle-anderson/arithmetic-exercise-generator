@@ -3,7 +3,7 @@ from DivisionSpecification import *
 from SubtractionSpecification import *
 from sympy.ntheory import factorint
 
-from src.ProblemSpecifications.Operand import *
+from Operand import *
 
 print type(factorint(12).keys())
 

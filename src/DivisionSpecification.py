@@ -1,7 +1,7 @@
 from types import *
 
 from ProblemSpecification import ProblemSpecification
-from src.Misc.auxiliary import *
+from auxiliary import *
 
 
 class DivisionSpecification(ProblemSpecification):

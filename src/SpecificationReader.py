@@ -1,6 +1,6 @@
 import openpyxl
 
-from src.ProblemSpecifications.OperandSpecification import OperandSpecification
+from OperandSpecification import OperandSpecification
 
 
 class SpecificationReader:

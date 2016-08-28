@@ -1,4 +1,4 @@
-from src.Misc.constants import *
+from constants import *
 
 
 class StudentSpecification:

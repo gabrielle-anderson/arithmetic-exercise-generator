@@ -1,10 +1,10 @@
 import random
 
 from openpyxl import *
-from openpyxl.styles import Font
 from openpyxl.styles import Alignment
+from openpyxl.styles import Font
 
-from src.Misc.constants import *
+from constants import *
 
 headerHeight = 2
 sheetTitle = "Number Operation Work"

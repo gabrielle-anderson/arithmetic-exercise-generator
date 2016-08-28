@@ -1,10 +1,11 @@
 import os
 
-from src.ProblemSpecifications.AdditionSpecification import *
-from src.ProblemSpecifications.DivisionSpecification import *
-from src.ProblemSpecifications.MultiplicationSpecification import *
-from src.ProblemSpecifications.SubtractionSpecification import *
-from src.Readers.SpecificationReaderParameters import SpecificationReaderParameters
+from AdditionSpecification import *
+from DivisionSpecification import *
+from SubtractionSpecification import *
+
+from MultiplicationSpecification import *
+from SpecificationReaderParameters import SpecificationReaderParameters
 
 plus = SpecificationReaderParameters(os.sep + "Addition", lambda x, y: (x + y), \
                                      lambda o1, o2, resultRange, op, adjustments, miscParameters:

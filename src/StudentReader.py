@@ -1,9 +1,7 @@
-import os
-
 import openpyxl
 
-from src.Misc.auxiliary import cellValues
-from src.ProblemSpecifications.StudentSpecification import StudentSpecification
+from StudentSpecification import StudentSpecification
+from auxiliary import cellValues
 
 
 class StudentReader:
