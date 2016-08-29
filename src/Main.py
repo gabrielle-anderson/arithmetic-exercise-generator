@@ -31,7 +31,7 @@ def processSpecifications(parameters):
 start =  datetime.datetime.now()
 rootDir = os.path.dirname(os.getcwd())
 
-os.chdir(os.pardir + os.sep + "specifications")
+os.chdir(rootDir + os.sep + "specifications")
 
 additionProblems = processSpecifications(plus)
 os.chdir(os.pardir)
