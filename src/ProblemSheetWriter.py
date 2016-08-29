@@ -15,7 +15,7 @@ headerFont = Font(name='Times New Roman', bold=True, size = 20)
 problemFont = Font(name='Times New Roman', size = 16)
 
 class ProblemSheetWriter:
-    def writeStudentProblems(self, name, studentSpecification, additionProblems, subtractionProblems, \
+    def writeStudentProblems(self, dateTime, name, studentSpecification, additionProblems, subtractionProblems, \
                              multiplicationProblems, divisionProblems):
         self.additionProblems = additionProblems
         self.subtractionProblems = subtractionProblems
@@ -72,14 +72,17 @@ class ProblemSheetWriter:
         ws.column_dimensions['H'].width = largeColumnWidth
         ws.column_dimensions['I'].width = smallColumnWidth
 
-        self.writeProblems(studentSpecification, 1)
-        self.writeProblems(studentSpecification, 4)
-        self.writeProblems(studentSpecification, 7)
+        self.writeProblems(name, studentSpecification, 1)
+        self.writeProblems(name, studentSpecification, 4)
+        self.writeProblems(name, studentSpecification, 7)
 
-        fileName =  name + ".xlsx"
+        if not os.path.exists(dateTime):
+            os.makedirs(dateTime)
+
+        fileName =  dateTime + os.sep + name + ".xlsx"
         wb.save(fileName)
 
-    def writeProblems(self, studentSpecification, columnNo):
+    def writeProblems(self, name, studentSpecification, columnNo):
         problemList = studentSpecification.toProblemList()
         i = 1
         while (len(problemList) > 0):
@@ -87,7 +90,12 @@ class ProblemSheetWriter:
             problemList.remove(problemString)
             row = (i + headerHeight)
             problemLevel = studentSpecification.getProblemLevel(problemString)
-            problemSpecification = self.getProblemSpecification(problemString)[problemLevel]
+            problemSpecifications = self.getProblemSpecification(problemString)
+            assert problemLevel in problemSpecifications.keys(), \
+                "Student %s has level %s for %s problems, but level %s has no specification." % \
+                    (name, str(problemLevel), problemNames[problemString], str(problemLevel))
+
+            problemSpecification = problemSpecifications[problemLevel]
             (x, y) = problemSpecification.randomOperands()
 
             self.ws.cell(row=row, column=(columnNo)).value = i

@@ -25,3 +25,5 @@ subtractionString = "-"
 multiplicationString = "*"
 divisionString = "\\"
 
+problemNames = {additionString: "addition", subtractionString: "subtraction", multiplicationString: "multiplication",\
+                divisionString: "division"}

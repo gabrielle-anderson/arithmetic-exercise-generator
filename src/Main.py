@@ -1,4 +1,5 @@
 import datetime
+import time
 import glob
 import re
 
@@ -45,12 +46,13 @@ os.chdir(os.pardir)
 os.chdir(rootDir + os.sep + "specifications")
 fileName = "studentInfo.xlsx"
 students = StudentReader().getStudents(fileName)
+dateTime = str(time.strftime('%Y-%m-%d %H.%M'))
 
 for studentName in students.keys():
     os.chdir(rootDir + os.sep + "Problem sheets")
     studentSpecification = students[studentName]
     # print str(studentName) + " " + str(students[studentName])
-    ProblemSheetWriter().writeStudentProblems(studentName, studentSpecification, additionProblems, subtractionProblems, \
+    ProblemSheetWriter().writeStudentProblems(dateTime, studentName, studentSpecification, additionProblems, subtractionProblems, \
                          multiplicationProblems, divisionProblems)
 
 
